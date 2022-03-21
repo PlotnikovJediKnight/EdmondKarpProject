@@ -14,6 +14,10 @@ namespace Widgets {
 				return 0;
 			}
 		}
+
+		case WM_DRAWITEM: {
+			return TRUE;
+		}
 		}
 
 		return std::nullopt;

@@ -141,6 +141,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="applicaiton_logistics.cpp" />
+    <ClCompile Include="image_resource.cpp" />
+    <ClCompile Include="vertex_image_storage.cpp" />
     <ClCompile Include="main_window.cpp" />
     <ClCompile Include="main_window_procedure.cpp" />
     <ClCompile Include="main.cpp" />
@@ -156,17 +158,86 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application_logistics.h" />
+    <ClInclude Include="image_resource.h" />
+    <ClInclude Include="vertex_image_storage.h" />
     <ClInclude Include="main_window.h" />
     <ClInclude Include="main_window_procedure.h" />
     <ClInclude Include="max_flow_button.h" />
     <ClInclude Include="med_button.h" />
     <ClInclude Include="network_area.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="snk_button.h" />
     <ClInclude Include="src_button.h" />
     <ClInclude Include="widgets.h" />
     <ClInclude Include="widget_factory.h" />
     <ClInclude Include="window.h" />
     <ClInclude Include="window_procedure.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\10BMP.bmp" />
+    <Image Include="..\res\10BMP_Mono.bmp" />
+    <Image Include="..\res\10BMP_Selected.bmp" />
+    <Image Include="..\res\11BMP.bmp" />
+    <Image Include="..\res\11BMP_Mono.bmp" />
+    <Image Include="..\res\11BMP_Selected.bmp" />
+    <Image Include="..\res\12BMP.bmp" />
+    <Image Include="..\res\12BMP_Mono.bmp" />
+    <Image Include="..\res\12BMP_Selected.bmp" />
+    <Image Include="..\res\13BMP.bmp" />
+    <Image Include="..\res\13BMP_Mono.bmp" />
+    <Image Include="..\res\13BMP_Selected.bmp" />
+    <Image Include="..\res\14BMP.bmp" />
+    <Image Include="..\res\14BMP_Mono.bmp" />
+    <Image Include="..\res\14BMP_Selected.bmp" />
+    <Image Include="..\res\15BMP.bmp" />
+    <Image Include="..\res\15BMP_Mono.bmp" />
+    <Image Include="..\res\15BMP_Selected.bmp" />
+    <Image Include="..\res\16BMP.bmp" />
+    <Image Include="..\res\16BMP_Mono.bmp" />
+    <Image Include="..\res\16BMP_Selected.bmp" />
+    <Image Include="..\res\17BMP.bmp" />
+    <Image Include="..\res\17BMP_Mono.bmp" />
+    <Image Include="..\res\17BMP_Selected.bmp" />
+    <Image Include="..\res\18BMP.bmp" />
+    <Image Include="..\res\18BMP_Mono.bmp" />
+    <Image Include="..\res\18BMP_Selected.bmp" />
+    <Image Include="..\res\1BMP.bmp" />
+    <Image Include="..\res\1BMP_Mono.bmp" />
+    <Image Include="..\res\1BMP_Selected.bmp" />
+    <Image Include="..\res\2BMP.bmp" />
+    <Image Include="..\res\2BMP_Mono.bmp" />
+    <Image Include="..\res\2BMP_Selected.bmp" />
+    <Image Include="..\res\3BMP.bmp" />
+    <Image Include="..\res\3BMP_Mono.bmp" />
+    <Image Include="..\res\3BMP_Selected.bmp" />
+    <Image Include="..\res\4BMP.bmp" />
+    <Image Include="..\res\4BMP_Mono.bmp" />
+    <Image Include="..\res\4BMP_Selected.bmp" />
+    <Image Include="..\res\5BMP.bmp" />
+    <Image Include="..\res\5BMP_Mono.bmp" />
+    <Image Include="..\res\5BMP_Selected.bmp" />
+    <Image Include="..\res\6BMP.bmp" />
+    <Image Include="..\res\6BMP_Mono.bmp" />
+    <Image Include="..\res\6BMP_Selected.bmp" />
+    <Image Include="..\res\7BMP.bmp" />
+    <Image Include="..\res\7BMP_Mono.bmp" />
+    <Image Include="..\res\7BMP_Selected.bmp" />
+    <Image Include="..\res\8BMP.bmp" />
+    <Image Include="..\res\8BMP_Mono.bmp" />
+    <Image Include="..\res\8BMP_Selected.bmp" />
+    <Image Include="..\res\9BMP.bmp" />
+    <Image Include="..\res\9BMP_Mono.bmp" />
+    <Image Include="..\res\9BMP_Selected.bmp" />
+    <Image Include="..\res\icon.ico" />
+    <Image Include="..\res\snkBMP.bmp" />
+    <Image Include="..\res\snkMonoBMP.bmp" />
+    <Image Include="..\res\SNK_SELECTED.bmp" />
+    <Image Include="..\res\srcBMP.bmp" />
+    <Image Include="..\res\srcMonoBMP.bmp" />
+    <Image Include="..\res\SRC_SELECTED.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EdmondKarpProject.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
