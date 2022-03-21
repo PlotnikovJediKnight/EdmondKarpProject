@@ -9,4 +9,14 @@ namespace Widgets {
 		InstantiateWindow(window_class_name_, hInstance, nCmdShow, width, height, windowTitle);
 	}
 
+	void MainWindow::SelectArrowCursor() {
+		HCURSOR hCurs = LoadCursor(NULL, IDC_ARROW);
+		SetClassLongPtr(hWnd_, GCLP_HCURSOR, (LONG)(hCurs));
+	}
+
+	void MainWindow::SelectCrossCursor() {
+		HCURSOR hCurs = LoadCursor(NULL, IDC_CROSS);
+		SetClassLongPtr(hWnd_, GCLP_HCURSOR, (LONG)(hCurs));
+	}
+
 }

@@ -20,7 +20,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	auto maxFlowButtonHolder = WidgetFactory::CreateMaxFlowButton(mainWindow.GetWindowHandle(), WIDGET_ID::MAXFLOWBUTTONID, 605, 440, 140, 70, L"Найти максимальный поток сети");
 	auto networkAreaHolder = WidgetFactory::CreateNetworkArea(mainWindow.GetWindowHandle(), 5, 5, 575, 525);
 
-	ApplicationMediator::CreateInstance(srcButtonHolder.get(), medButtonHolder.get(), snkButtonHolder.get(), networkAreaHolder.get());
+	ApplicationMediator::CreateInstance(&mainWindow, srcButtonHolder.get(), medButtonHolder.get(), snkButtonHolder.get(), networkAreaHolder.get());
 
 	clientArea->AddWidget(move(srcButtonHolder))
 		.AddWidget(move(medButtonHolder))
