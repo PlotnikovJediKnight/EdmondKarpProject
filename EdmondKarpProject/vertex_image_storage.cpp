@@ -6,7 +6,7 @@ using namespace std;
 
 namespace Images {
 
-	size_t VertexImageStorage::MAX_IMAGES_PER_VECTOR = 20;
+	const size_t VertexImageStorage::MAX_IMAGES_PER_VECTOR = 20;
 
 	#define FILL_VECTOR_WITH_IMAGES(VECTOR_NAME, FILE_NAME_SUFFIX) \
 			{\
@@ -47,8 +47,8 @@ namespace Images {
 	}
 
 	const ImageResource&
-	VertexImageStorage::operator[](int vertexIndex) {
-		vector<ImageResource>* vectorPointer = nullptr;
+	VertexImageStorage::operator[](int vertexIndex) const {
+		const vector<ImageResource>* vectorPointer = nullptr;
 		switch (kind_) {
 		case VertexTokenKind::REGULAR: {
 			vectorPointer = &images_regular_;

@@ -7,6 +7,10 @@ namespace Images {
 		rhs.hBitmap_ = NULL;
 	}
 
+	ImageResource::operator HGDIOBJ() const {
+		return hBitmap_;
+	}
+
 	ImageResource::ImageResource(size_t macroID) {
 		hBitmap_ = LoadBitmap(GetModuleHandle(NULL), MAKEINTRESOURCE(macroID));
 	}

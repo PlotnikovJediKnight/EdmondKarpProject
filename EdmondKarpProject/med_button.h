@@ -11,5 +11,7 @@ namespace Widgets {
 	public:
 		using CustomButton::CustomButton;
 		virtual std::optional<LRESULT> HandleWindowEvent(HWND, UINT uMsg, WPARAM wParam, LPARAM) override;
+	protected:
+		virtual void DrawCustomButton(HDC, HWND, LPDRAWITEMSTRUCT) override;
 	};
 }

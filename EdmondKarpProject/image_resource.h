@@ -9,6 +9,7 @@ namespace Images {
 		ImageResource(const ImageResource&) = delete;
 		ImageResource& operator=(const ImageResource&) = delete;
 		ImageResource(ImageResource&&);
+		operator HGDIOBJ() const;
 		~ImageResource();
 	private:
 		HBITMAP hBitmap_;

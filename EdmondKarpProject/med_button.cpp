@@ -19,4 +19,8 @@ namespace Widgets {
 		return std::nullopt;
 	}
 
+	void MEDButton::DrawCustomButton(HDC, HWND, LPDRAWITEMSTRUCT) {
+
+	}
+
 }

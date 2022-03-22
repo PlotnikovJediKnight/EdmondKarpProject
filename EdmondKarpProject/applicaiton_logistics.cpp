@@ -9,7 +9,7 @@ namespace Logistics {
 	ApplicationMediator::ApplicationMediator(Widgets::MainWindow* mainWndP, Widgets::SRCButton* srcBtnP, Widgets::MEDButton* medBtnP, Widgets::SNKButton* snkBtnP, Widgets::NetworkArea* nwAreaP)
 		: main_wnd_p_(mainWndP), src_btn_p_(srcBtnP), med_btn_p_(medBtnP), snk_btn_p_(snkBtnP), nw_area_p_(nwAreaP),
 		  src_is_selected_(false), src_is_created_(false),
-		  snk_is_selected_(false),
+		  snk_is_selected_(false), snk_is_created_(false),
 		  med_is_selected_(false) {  }
 
 	void ApplicationMediator::CreateInstance(Widgets::MainWindow* mainWndP, Widgets::SRCButton* srcBtnP, Widgets::MEDButton* medBtnP, Widgets::SNKButton* snkBtnP, Widgets::NetworkArea* nwAreaP) {
@@ -65,6 +65,10 @@ namespace Logistics {
 		return src_is_created_;
 	}
 
+	void ApplicationMediator::FlipSRCSelected() {
+		src_is_selected_ = (src_is_selected_) ? false : true;
+	}
+
 	//====================================================
 
 	void ApplicationMediator::MEDButtonClicked() {
@@ -80,16 +84,36 @@ namespace Logistics {
 
 	//====================================================
 
-	void ApplicationMediator::SNKButtonClicked() {
+	int ApplicationMediator::SNKButtonClicked() {
+		if (IsSRCSelected() || IsMEDSelected()) {
+			SetSNKSelected(false);
+			return 0;
+		}
 
+		if (!IsSNKCreated() && IsSNKSelected()) {
+			MakeWindowCrossCursor();
+		}
+		else {
+			SetSNKSelected(false);
+		}
+
+		return 0;
 	}
 
 	bool ApplicationMediator::IsSNKSelected() {
 		return snk_is_selected_;
 	}
 
-	void ApplicationMediator::SetSNKSelected(bool selected){
+	void ApplicationMediator::SetSNKSelected(bool selected) {
 		snk_is_selected_ = selected;
+	}
+
+	bool ApplicationMediator::IsSNKCreated() {
+		return snk_is_created_;
+	}
+
+	void ApplicationMediator::FlipSNKSelected() {
+		snk_is_selected_ = (snk_is_selected_) ? false : true;
 	}
 
 	//====================================================

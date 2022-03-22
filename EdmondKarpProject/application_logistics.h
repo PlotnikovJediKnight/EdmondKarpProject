@@ -33,14 +33,17 @@ namespace Logistics {
 		bool IsSRCSelected();
 		void SetSRCSelected(bool);
 		bool IsSRCCreated();
+		void FlipSRCSelected();
 
 		void MEDButtonClicked();
 		bool IsMEDSelected();
 		void SetMEDSelected(bool);
 
-		void SNKButtonClicked();
+		int SNKButtonClicked();
 		bool IsSNKSelected();
 		void SetSNKSelected(bool);
+		bool IsSNKCreated();
+		void FlipSNKSelected();
 
 		void MaxFlowButtonClicked();
 
@@ -68,6 +71,8 @@ namespace Logistics {
 		bool src_is_created_;
 
 		bool snk_is_selected_;
+		bool snk_is_created_;
+
 		bool med_is_selected_;
 	};
 

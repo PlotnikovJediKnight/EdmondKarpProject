@@ -49,6 +49,7 @@ namespace Widgets {
 	public:
 		CustomButton(HWND ownerHandler, Logistics::WIDGET_ID buttonID, int x, int y, int width, int height);
 	protected:
+		virtual void DrawCustomButton(HDC hMemDC, HWND hWnd, LPDRAWITEMSTRUCT pdis) = 0;
 		HWND hWndButton;
 		Logistics::WIDGET_ID hButtonID;
 	};
